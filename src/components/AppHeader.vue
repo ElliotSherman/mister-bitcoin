@@ -2,7 +2,7 @@
   <header class="app-header main-container full">
     <div class="flex space-between align-center">
       <RouterLink class="logo flex align-center" to="/">
-        <img src="../../logo.png" />
+        <img src="/public/logo.png" />
         <h1>mister bitcoin</h1>
       </RouterLink>
 
