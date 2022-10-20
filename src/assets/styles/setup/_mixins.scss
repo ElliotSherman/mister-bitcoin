@@ -1,0 +1,99 @@
+/* Breakpoint mixins */
+
+@mixin for-mobile-layout {
+  @media (max-width: calc($mobile-breakpoint + 40px)) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (min-width: calc($narrow-breakpoint + 40px)) {
+    @content;
+  }
+}
+
+@mixin for-tablet-layout {
+  @media (min-width: calc($tablet-breakpoint + 40px)) {
+    @content;
+  }
+}
+@mixin for-normal-layout {
+  @media (min-width: calc($normal-breakpoint + 40px)) {
+    @content;
+  }
+}
+@mixin for-desktop-layout {
+  @media (min-width: calc($desktop-breakpoint + 40px)) {
+    @content;
+  }
+}
+// @mixin for-wide-layout {
+//   @media (min-width: calc($desktop-breakpoint + 40px)) {
+//     @content;
+//   }
+// }
+
+/* Media  Mixins */
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: calc(($height / $width) * 100%);
+  }
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  > img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@mixin nav-link {
+  transition: box-shadow ease-in-out 0.3s;
+  &:hover {
+    box-shadow: 0 6px 0px 0px #ffffff;
+  }
+}
+
+@mixin gold-bg {
+  background: $logo-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 500;
+  -webkit-text-stroke: 1px transparent;
+}
+
+@mixin dark-bg {
+  position: relative;
+  height: calc(100vh - 60px - 70px);
+  &::after {
+    z-index: -1;
+    content: "";
+    background: $header-gradient;
+    padding: 0;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+  }
+}
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}

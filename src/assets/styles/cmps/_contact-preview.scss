@@ -1,0 +1,11 @@
+.contact-preview {
+  border-radius: 4px;
+  background-color: $clr8;
+  .avatar {
+    width: 150px;
+    margin-inline-end: auto;
+  }
+  .contact-ui {
+    padding: 10px;
+  }
+}

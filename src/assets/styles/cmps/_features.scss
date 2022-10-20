@@ -1,0 +1,37 @@
+.features {
+  margin-top: 40px;
+  .feature-card {
+    :not(.card-text) {
+      @include gold-bg;
+    }
+    border-block-end: 2px solid;
+    border-inline-start: 2px solid;
+
+    border-image-source: $logo-gradient;
+    border-image-slice: 1;
+    width: 300px;
+    img {
+      height: 150px;
+      width: unset;
+      margin-bottom: rem(24px);
+    }
+    .card-title {
+      font-family: big-shoulders;
+      font-weight: 600;
+      font-size: rem(42px);
+      color: $clr3;
+      margin: 0;
+      width: 300px;
+      text-align: center;
+    }
+    .card-text {
+      text-align: justify;
+      font-family: azeret;
+      font-weight: 300;
+      padding: 20px;
+      color: $clr3;
+      font-size: rem(16px);
+      margin: 0;
+    }
+  }
+}

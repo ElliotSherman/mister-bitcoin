@@ -1,0 +1,24 @@
+.app-home {
+  background-image: $header-gradient;
+  .hero {
+    text-align: center;
+    color: $clr6;
+    border: 2px solid;
+    border-image-source: $logo-gradient;
+    border-image-slice: 1;
+    @include gold-bg;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 80px;
+    h1 {
+      // @include gold-bg;
+      font-size: rem(48px);
+    }
+    p {
+      font-size: rem(36px);
+      font-family: big-shoulders;
+      font-weight: 200;
+      letter-spacing: 8px;
+    }
+  }
+}

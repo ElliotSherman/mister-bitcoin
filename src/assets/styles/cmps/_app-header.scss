@@ -1,0 +1,38 @@
+.app-header {
+  font-family: azeret-light;
+  background: $header-gradient;
+  height: 70px;
+  text-transform: capitalize;
+  opacity: 0.8;
+  .logo {
+    gap: rem(10px);
+    text-decoration: none;
+    img {
+      width: rem(50px);
+    }
+    h1 {
+      margin: 0;
+      background: $clr1;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 100;
+    }
+  }
+  nav {
+    gap: rem(24px);
+    a {
+      color: $clr1;
+      font-size: rem(16px);
+      font-family: azeret;
+      font-weight: 800;
+
+      &.router-link-exact-active {
+        @include gold-bg;
+      }
+      &:hover {
+        @include gold-bg;
+      }
+    }
+  }
+}
